@@ -3,810 +3,796 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carson Internal Product Hub</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Carson Internal Portal</title>
   <style>
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('https://cdn.prod.website-files.com/6597b38942f1fe5180e52807/6597bc082370c37e3aacd096_PPNeueMontreal-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('https://cdn.prod.website-files.com/6597b38942f1fe5180e52807/6597bbdaa7aa7cca90cf82d7_PPNeueMontreal-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FH Oscar';
+      src: url('https://cdn.prod.website-files.com/6597b38942f1fe5180e52807/6597baa7a7aa7cca90ced3eb_FHOscar-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue-dark:   #0a2540;
-      --blue-mid:    #1a4f8a;
-      --blue-bright: #1e6fd9;
-      --blue-light:  #d6e8ff;
-      --teal:        #0d9488;
-      --teal-light:  #ccfbf1;
-      --green:       #059669;
-      --green-light: #d1fae5;
-      --grey-900:    #111827;
-      --grey-700:    #374151;
-      --grey-500:    #6b7280;
-      --grey-300:    #d1d5db;
-      --grey-100:    #f3f4f6;
+      --black:       #161616;
+      --grey-900:    #222222;
+      --grey-700:    #525252;
+      --grey-500:    #a1a09b;
+      --grey-300:    #d3d2cd;
+      --grey-100:    #f1f0eb;
+      --grey-50:     #f7f6f2;
       --white:       #ffffff;
-      --card-radius: 14px;
-      --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
-      --shadow-md:   0 4px 16px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
-      --shadow-lg:   0 10px 32px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.07);
+      --blue:        #054bff;
+      --blue-hover:  #0340d9;
+      --green:       #1ab87a;
+      --green-light: #e8faf2;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--grey-100);
-      color: var(--grey-900);
+      font-family: 'PP Neue Montreal', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--grey-50);
+      color: var(--black);
       min-height: 100vh;
-      line-height: 1.6;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── HEADER ── */
-    header {
-      background: var(--blue-dark);
-      padding: 0 40px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    /* ── NAV ── */
+    nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-    }
-
-    .header-left {
+      background: var(--white);
+      border-bottom: 1px solid var(--grey-300);
+      height: 60px;
       display: flex;
       align-items: center;
-      gap: 14px;
+      padding: 0 40px;
+      justify-content: space-between;
     }
 
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      background: var(--teal);
-      border-radius: 8px;
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    .nav-logo-mark {
+      width: 28px;
+      height: 28px;
+      background: var(--black);
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 15px;
-      color: white;
-      letter-spacing: -0.5px;
+      color: var(--white);
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
     }
 
-    .header-title {
-      font-size: 17px;
-      font-weight: 600;
-      color: white;
+    .nav-wordmark {
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--black);
       letter-spacing: -0.2px;
     }
 
-    .header-badge {
-      font-size: 11px;
-      font-weight: 500;
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.75);
-      padding: 3px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.3px;
+    .nav-divider {
+      width: 1px;
+      height: 18px;
+      background: var(--grey-300);
     }
 
-    .header-right {
+    .nav-subtitle {
+      font-size: 13px;
+      color: var(--grey-500);
+      font-weight: 400;
+    }
+
+    .nav-right {
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .header-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--teal);
-      border-radius: 50%;
+    .nav-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--grey-700);
+      background: var(--grey-100);
+      padding: 5px 12px;
+      border-radius: 100px;
     }
 
-    .header-status {
-      font-size: 12px;
-      color: rgba(255,255,255,0.6);
+    .nav-pill-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
     }
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 60%, var(--teal) 100%);
-      padding: 64px 40px 72px;
-      text-align: center;
+      background: var(--black);
+      padding: 80px 40px 88px;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(13,148,136,0.18) 0%, transparent 65%),
-                  radial-gradient(ellipse at 20% 80%, rgba(30,111,217,0.20) 0%, transparent 55%);
-      pointer-events: none;
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
+      font-family: 'PP Neue Montreal', sans-serif;
       font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.2px;
+      font-weight: 500;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--teal-light);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 6px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      color: var(--grey-500);
+      margin-bottom: 24px;
     }
 
-    .hero-eyebrow span {
+    .hero-eyebrow-dot {
       width: 6px;
       height: 6px;
-      background: var(--teal);
+      background: var(--blue);
       border-radius: 50%;
-      display: inline-block;
     }
 
     .hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 700;
-      color: white;
-      letter-spacing: -1.5px;
-      line-height: 1.1;
-      margin-bottom: 16px;
+      font-family: 'FH Oscar', sans-serif;
+      font-weight: 400;
+      font-size: clamp(48px, 7vw, 80px);
+      line-height: 1.0;
+      letter-spacing: -2px;
+      color: var(--white);
+      max-width: 700px;
+      margin-bottom: 24px;
     }
 
-    .hero h1 em {
-      font-style: normal;
-      background: linear-gradient(90deg, #5eead4, #93c5fd);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero p {
-      font-size: 17px;
-      color: rgba(255,255,255,0.72);
-      max-width: 540px;
-      margin: 0 auto;
+    .hero-sub {
+      font-size: 16px;
+      color: var(--grey-500);
+      max-width: 420px;
+      line-height: 1.6;
       font-weight: 400;
     }
 
-    /* ── MAIN CONTENT ── */
+    /* ── MAIN ── */
     main {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 48px 32px 80px;
+      padding: 64px 40px 100px;
     }
 
-    /* ── BUCKET 0 — RESOURCE HUB ── */
-    .resource-hub {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
-      border-radius: var(--card-radius);
-      padding: 36px 40px;
-      margin-bottom: 36px;
-      box-shadow: var(--shadow-lg);
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .resource-hub::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 80% 20%, rgba(13,148,136,0.25) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .resource-hub-header {
-      grid-column: 1 / -1;
-      margin-bottom: 28px;
-    }
-
-    .resource-hub-header h2 {
-      font-size: 22px;
-      font-weight: 700;
-      color: white;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
-    }
-
-    .resource-hub-header p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.55);
-    }
-
-    .hub-item {
-      padding: 20px 24px;
-      border-left: 1px solid rgba(255,255,255,0.1);
-      position: relative;
-    }
-
-    .hub-item:first-of-type {
-      border-left: none;
-    }
-
-    .hub-item-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.1);
+    /* ── SECTION HEADER ── */
+    .section-header {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 12px;
-      font-size: 16px;
+      gap: 12px;
+      margin-bottom: 20px;
     }
 
-    .hub-item h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 6px;
-    }
-
-    .hub-item p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.5;
-    }
-
-    .hub-item a {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 12px;
-      font-size: 13px;
-      font-weight: 500;
-      color: #5eead4;
-      text-decoration: none;
-      transition: gap 0.2s;
-    }
-
-    .hub-item a:hover { gap: 8px; }
-    .hub-item a::after { content: '→'; }
-
-    /* ── SECTION LABEL ── */
     .section-label {
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
       color: var(--grey-500);
-      margin-bottom: 16px;
-      margin-top: 40px;
-      padding-left: 2px;
     }
 
-    /* ── GRID ── */
-    .buckets-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 20px;
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--grey-300);
     }
 
-    /* ── BUCKET CARD ── */
-    .bucket {
+    /* ── RESOURCE HUB BANNER (Bucket 0) ── */
+    .hub-banner {
       background: var(--white);
-      border-radius: var(--card-radius);
-      box-shadow: var(--shadow-sm);
       border: 1px solid var(--grey-300);
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       overflow: hidden;
-      transition: box-shadow 0.25s, transform 0.25s;
+      margin-bottom: 56px;
+    }
+
+    .hub-cell {
+      padding: 36px 36px 32px;
+      border-right: 1px solid var(--grey-300);
+      position: relative;
+      transition: background 0.15s;
+    }
+
+    .hub-cell:last-child { border-right: none; }
+    .hub-cell:hover { background: var(--grey-50); }
+
+    .hub-cell-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--grey-500);
+      margin-bottom: 12px;
+    }
+
+    .hub-cell h3 {
+      font-family: 'FH Oscar', sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+
+    .hub-cell p {
+      font-size: 13px;
+      color: var(--grey-500);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .hub-cell-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .hub-cell-link:hover { color: var(--blue); border-color: var(--blue); }
+
+    .hub-cell-link::after {
+      content: '↗';
+      font-size: 12px;
+    }
+
+    /* ── TILES GRID ── */
+    .tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--grey-300);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 56px;
+    }
+
+    /* ── TILE ── */
+    .tile {
+      background: var(--white);
+      border-right: 1px solid var(--grey-300);
+      border-bottom: 1px solid var(--grey-300);
+      padding: 32px 28px 28px;
       display: flex;
       flex-direction: column;
+      gap: 0;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+      min-height: 340px;
     }
 
-    .bucket:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
+    .tile:nth-child(4n) { border-right: none; }
+    .tile:nth-last-child(-n+4) { border-bottom: none; }
+    .tile:hover { background: var(--grey-50); }
 
-    /* ── BUCKET HEADER ── */
-    .bucket-header {
-      padding: 22px 24px 18px;
-      border-bottom: 1px solid var(--grey-100);
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
-    .bucket-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .bucket-icon.blue       { background: var(--blue-light);  }
-    .bucket-icon.teal       { background: var(--teal-light);  }
-    .bucket-icon.green      { background: var(--green-light); }
-    .bucket-icon.grey       { background: var(--grey-100);    }
-    .bucket-icon.blue-mid   { background: #dbeafe;            }
-    .bucket-icon.indigo     { background: #e0e7ff;            }
-
-    .bucket-header-text h2 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--grey-900);
-      letter-spacing: -0.2px;
-      margin-bottom: 3px;
-    }
-
-    .bucket-header-text p {
-      font-size: 12px;
+    .tile-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
       color: var(--grey-500);
-      line-height: 1.4;
+      margin-bottom: 20px;
+      font-family: 'PP Neue Montreal', sans-serif;
     }
 
-    /* ── BUCKET ACCENT BAR ── */
-    .bucket.accent-blue   .bucket-header { border-top: 3px solid var(--blue-bright); }
-    .bucket.accent-teal   .bucket-header { border-top: 3px solid var(--teal);        }
-    .bucket.accent-green  .bucket-header { border-top: 3px solid var(--green);       }
-    .bucket.accent-indigo .bucket-header { border-top: 3px solid #6366f1;            }
-    .bucket.accent-mid    .bucket-header { border-top: 3px solid var(--blue-mid);    }
-    .bucket.accent-grey   .bucket-header { border-top: 3px solid var(--grey-500);    }
+    .tile-icon {
+      font-size: 22px;
+      margin-bottom: 16px;
+      display: block;
+    }
 
-    /* ── BUCKET LINKS ── */
-    .bucket-links {
-      padding: 8px 0 8px;
+    .tile h2 {
+      font-family: 'FH Oscar', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .tile-desc {
+      font-size: 13px;
+      color: var(--grey-500);
+      line-height: 1.6;
+      margin-bottom: 24px;
       flex: 1;
     }
 
-    .link-item {
+    .tile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid var(--grey-100);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+
+    .tile-link {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      padding: 11px 24px;
+      gap: 8px;
+      padding: 8px 0;
       text-decoration: none;
       color: var(--grey-700);
-      font-size: 13.5px;
-      font-weight: 500;
-      transition: background 0.15s, color 0.15s;
+      font-size: 13px;
+      font-weight: 400;
       line-height: 1.4;
       border-bottom: 1px solid transparent;
+      transition: color 0.12s;
     }
 
-    .link-item:last-child { border-bottom: none; }
+    .tile-link:last-child { border-bottom: none; }
 
-    .link-item:hover {
-      background: var(--grey-100);
-      color: var(--blue-bright);
-    }
+    .tile-link:hover { color: var(--blue); }
 
-    .link-item-dot {
-      width: 6px;
-      height: 6px;
+    .tile-link-bullet {
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
+      background: var(--grey-300);
       flex-shrink: 0;
       margin-top: 6px;
+      transition: background 0.12s;
     }
 
-    .dot-blue   { background: var(--blue-bright); }
-    .dot-teal   { background: var(--teal);        }
-    .dot-green  { background: var(--green);       }
-    .dot-grey   { background: var(--grey-500);    }
-    .dot-indigo { background: #6366f1;            }
-    .dot-mid    { background: var(--blue-mid);    }
+    .tile-link:hover .tile-link-bullet { background: var(--blue); }
 
-    .link-item-text { flex: 1; }
-
-    .link-item-desc {
+    .tile-link-sub {
       display: block;
       font-size: 11.5px;
-      font-weight: 400;
       color: var(--grey-500);
       margin-top: 2px;
-      line-height: 1.4;
     }
 
-    /* ── SUB-LINKS (integrations) ── */
-    .sub-links {
-      margin: 4px 24px 8px 40px;
-      border-left: 2px solid var(--grey-200, #e5e7eb);
-      padding-left: 12px;
-    }
-
-    .sub-link {
+    /* Sub-links inside tiles */
+    .tile-sublinks {
       display: flex;
-      align-items: center;
-      gap: 7px;
-      padding: 5px 0;
+      flex-direction: column;
+      gap: 0;
+      margin-left: 12px;
+      border-left: 1px solid var(--grey-200, #e5e5e0);
+      padding-left: 12px;
+      margin-bottom: 4px;
+    }
+
+    .tile-sublink {
+      display: block;
+      padding: 4px 0;
       text-decoration: none;
       color: var(--grey-500);
       font-size: 12px;
+      transition: color 0.12s;
+    }
+
+    .tile-sublink:hover { color: var(--blue); }
+
+    /* Group label inside tile links */
+    .tile-link-group {
+      font-size: 11px;
       font-weight: 500;
-      transition: color 0.15s;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--grey-500);
+      padding: 10px 0 4px;
+      border-top: 1px solid var(--grey-100);
+      margin-top: 4px;
     }
 
-    .sub-link:hover { color: var(--blue-bright); }
-    .sub-link::before { content: '↳'; font-size: 11px; color: var(--grey-300); }
+    .tile-link-group:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
-    /* ── DIVIDER IN BUCKET ── */
-    .bucket-divider {
-      height: 1px;
-      background: var(--grey-100);
-      margin: 4px 24px;
-    }
+    /* Blue accent tile */
+    .tile.accent-blue { background: var(--blue); }
+    .tile.accent-blue:hover { background: var(--blue-hover); }
+    .tile.accent-blue .tile-number,
+    .tile.accent-blue h2,
+    .tile.accent-blue .tile-desc { color: rgba(255,255,255,0.85); }
+    .tile.accent-blue h2 { color: var(--white); }
+    .tile.accent-blue .tile-links { border-top-color: rgba(255,255,255,0.2); }
+    .tile.accent-blue .tile-link { color: rgba(255,255,255,0.75); }
+    .tile.accent-blue .tile-link:hover { color: var(--white); }
+    .tile.accent-blue .tile-link-bullet { background: rgba(255,255,255,0.35); }
+    .tile.accent-blue .tile-link:hover .tile-link-bullet { background: var(--white); }
+
+    /* Dark tile */
+    .tile.accent-dark { background: var(--black); }
+    .tile.accent-dark:hover { background: var(--grey-900); }
+    .tile.accent-dark .tile-number { color: rgba(255,255,255,0.4); }
+    .tile.accent-dark h2 { color: var(--white); }
+    .tile.accent-dark .tile-desc { color: rgba(255,255,255,0.5); }
+    .tile.accent-dark .tile-links { border-top-color: rgba(255,255,255,0.1); }
+    .tile.accent-dark .tile-link { color: rgba(255,255,255,0.65); }
+    .tile.accent-dark .tile-link:hover { color: var(--white); }
+    .tile.accent-dark .tile-link-bullet { background: rgba(255,255,255,0.25); }
+    .tile.accent-dark .tile-link:hover .tile-link-bullet { background: var(--white); }
+    .tile.accent-dark .tile-link-group { color: rgba(255,255,255,0.3); border-top-color: rgba(255,255,255,0.1); }
+    .tile.accent-dark .tile-sublinks { border-left-color: rgba(255,255,255,0.15); }
+    .tile.accent-dark .tile-sublink { color: rgba(255,255,255,0.45); }
+    .tile.accent-dark .tile-sublink:hover { color: var(--white); }
+
+    /* Grey tile */
+    .tile.accent-grey { background: var(--grey-100); }
+    .tile.accent-grey:hover { background: #e9e8e3; }
 
     /* ── FOOTER ── */
     footer {
-      background: var(--blue-dark);
+      border-top: 1px solid var(--grey-300);
+      background: var(--white);
       padding: 28px 40px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    footer p {
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.4);
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
-    footer strong {
-      color: rgba(255,255,255,0.7);
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo-mark {
+      width: 22px;
+      height: 22px;
+      background: var(--black);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    .footer-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .footer-meta {
+      font-size: 12px;
+      color: var(--grey-500);
+    }
+
+    .footer-right {
+      font-size: 12px;
+      color: var(--grey-500);
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .resource-hub { grid-template-columns: 1fr; }
-      .hub-item { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
-      .hub-item:first-of-type { border-top: none; }
-      .buckets-grid { grid-template-columns: 1fr; }
-      header { padding: 0 20px; }
-      main { padding: 32px 16px 60px; }
-      .hero { padding: 44px 20px 52px; }
-      .resource-hub { padding: 28px 20px; }
+    @media (max-width: 1100px) {
+      .tiles-grid { grid-template-columns: repeat(2, 1fr); }
+      .tile:nth-child(4n) { border-right: 1px solid var(--grey-300); }
+      .tile:nth-child(2n) { border-right: none; }
+      .tile:nth-last-child(-n+4) { border-bottom: 1px solid var(--grey-300); }
+      .tile:nth-last-child(-n+2) { border-bottom: none; }
+    }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 52px 20px 60px; }
+      main { padding: 40px 20px 72px; }
+      .tiles-grid { grid-template-columns: 1fr; }
+      .tile { border-right: none !important; }
+      .tile { border-bottom: 1px solid var(--grey-300) !important; }
+      .tile:last-child { border-bottom: none !important; }
+      .tile { min-height: auto; }
+      .hub-banner { grid-template-columns: 1fr; }
+      .hub-cell { border-right: none; border-bottom: 1px solid var(--grey-300); }
+      .hub-cell:last-child { border-bottom: none; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="header-left">
-    <div class="logo-mark">C</div>
-    <span class="header-title">Carson Internal Portal</span>
-    <span class="header-badge">Product Team</span>
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-mark">C</div>
+      <span class="nav-wordmark">carson</span>
+    </a>
+    <div class="nav-divider"></div>
+    <span class="nav-subtitle">Internal Portal</span>
   </div>
-  <div class="header-right">
-    <div class="header-dot"></div>
-    <span class="header-status">Internal Use Only</span>
+  <div class="nav-right">
+    <div class="nav-pill">
+      <div class="nav-pill-dot"></div>
+      Internal use only
+    </div>
   </div>
-</header>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-eyebrow"><span></span>Product Resource Hub</div>
-  <h1>Everything Product,<br /><em>In One Place</em></h1>
-  <p>Your central hub for Carson platform documentation, processes, integrations, and team resources.</p>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Product Resource Hub
+    </div>
+    <h1>One portal.<br>All product.</h1>
+    <p class="hero-sub">Your central hub for Carson platform documentation, processes, integrations, and team resources.</p>
+  </div>
 </div>
 
 <main>
 
-  <!-- BUCKET 0: RESOURCE HUB -->
-  <div class="resource-hub">
-    <div class="resource-hub-header">
-      <h2>Product Resource Hub</h2>
-      <p>Start here — orientation, navigation, and key contacts for the Carson product team.</p>
-    </div>
-    <div class="hub-item">
-      <div class="hub-item-icon">🏠</div>
+  <!-- BUCKET 0: Resource Hub -->
+  <div class="section-header">
+    <span class="section-label">Start here</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="hub-banner">
+    <div class="hub-cell">
+      <div class="hub-cell-tag">01</div>
       <h3>What is Carson</h3>
-      <p>Overview of the Carson platform, its purpose, and what it does for property managers and residents.</p>
-      <a href="#">Learn more</a>
+      <p>Overview of the Carson platform, its purpose, and what it delivers for property managers and residents.</p>
+      <a class="hub-cell-link" href="#">Read overview</a>
     </div>
-    <div class="hub-item">
-      <div class="hub-item-icon">🗺️</div>
-      <h3>How to Navigate This Site</h3>
+    <div class="hub-cell">
+      <div class="hub-cell-tag">02</div>
+      <h3>How to Navigate</h3>
       <p>A guide to using this internal portal and finding the resources you need quickly.</p>
-      <a href="#">View guide</a>
+      <a class="hub-cell-link" href="#">View guide</a>
     </div>
-    <div class="hub-item">
-      <div class="hub-item-icon">👥</div>
+    <div class="hub-cell">
+      <div class="hub-cell-tag">03</div>
       <h3>Key Contacts</h3>
-      <p>Who to reach out to for product, engineering, QA, design, and partner support.</p>
-      <a href="#">View contacts</a>
+      <p>Who to reach for product, engineering, QA, design, and partner support across the team.</p>
+      <a class="hub-cell-link" href="#">View contacts</a>
     </div>
   </div>
 
-  <!-- SECTION: FOUNDATIONS + INTEGRATIONS -->
-  <div class="section-label">Core Documentation</div>
-  <div class="buckets-grid">
-
-    <!-- BUCKET 1: Platform Foundations -->
-    <div class="bucket accent-blue">
-      <div class="bucket-header">
-        <div class="bucket-icon blue">🏗️</div>
-        <div class="bucket-header-text">
-          <h2>Platform Foundations</h2>
-          <p>What Carson is and how it works.</p>
-        </div>
-      </div>
-      <div class="bucket-links">
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-blue"></div>
-          <div class="link-item-text">
-            Product Handbook
-            <span class="link-item-desc">Complete walkthrough of Admin, iOS, and Android experiences.</span>
-          </div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-blue"></div>
-          <div class="link-item-text">
-            QA Testing Process
-            <span class="link-item-desc">Overview of testing strategy, environments, and release validation.</span>
-          </div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-blue"></div>
-          <div class="link-item-text">
-            Product Processes
-            <span class="link-item-desc">How product development operates, including PRDs, grooming, and release workflows.</span>
-          </div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-blue"></div>
-          <div class="link-item-text">
-            System Architecture Overview
-            <span class="link-item-desc">Current state and future state of the platform (formerly Now/Then/Future).</span>
-          </div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-blue"></div>
-          <div class="link-item-text">
-            Hardware Integrations Overview
-            <span class="link-item-desc">Summary of all hardware integrations.</span>
-          </div>
-        </a>
-        <div class="sub-links">
-          <a class="sub-link" href="#">Dormakaba</a>
-          <a class="sub-link" href="#">Salto</a>
-          <a class="sub-link" href="#">Brivo</a>
-          <a class="sub-link" href="#">Akuvox</a>
-          <a class="sub-link" href="#">2N</a>
-        </div>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-blue"></div>
-          <div class="link-item-text">
-            Software Integrations Overview
-            <span class="link-item-desc">Summary of all software integrations.</span>
-          </div>
-        </a>
-        <div class="sub-links">
-          <a class="sub-link" href="#">Yardi</a>
-          <a class="sub-link" href="#">Eagle Eye Networks</a>
-          <a class="sub-link" href="#">Flow</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- BUCKET 2: Integrations -->
-    <div class="bucket accent-teal">
-      <div class="bucket-header">
-        <div class="bucket-icon teal">🔌</div>
-        <div class="bucket-header-text">
-          <h2>Integrations</h2>
-          <p>Detailed documentation for external systems.</p>
-        </div>
-      </div>
-      <div class="bucket-links">
-        <a class="link-item" href="#" style="font-weight:600; color: var(--grey-900); pointer-events:none;">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Hardware Integrations</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Dormakaba</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Salto</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Brivo</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Akuvox</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">2N</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Additional providers as applicable</div>
-        </a>
-        <div class="bucket-divider"></div>
-        <a class="link-item" href="#" style="font-weight:600; color: var(--grey-900); pointer-events:none;">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Software Integrations</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Yardi</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Eagle Eye Networks</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Flow</div>
-        </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-teal"></div>
-          <div class="link-item-text">Additional providers as applicable</div>
-        </a>
-      </div>
-    </div>
-
+  <!-- BUCKETS 1–7 -->
+  <div class="section-header">
+    <span class="section-label">Documentation &amp; Resources</span>
+    <div class="section-rule"></div>
   </div>
 
-  <!-- SECTION: BUILD + OPS + PLANNING + TEAM -->
-  <div class="section-label">Build, Operations &amp; Planning</div>
-  <div class="buckets-grid">
+  <div class="tiles-grid">
 
-    <!-- BUCKET 3: Build and Documentation -->
-    <div class="bucket accent-mid">
-      <div class="bucket-header">
-        <div class="bucket-icon blue-mid">📐</div>
-        <div class="bucket-header-text">
-          <h2>Build and Documentation</h2>
-          <p>How product is defined, built, and documented.</p>
-        </div>
-      </div>
-      <div class="bucket-links">
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-mid"></div>
-          <div class="link-item-text">
-            Product Requirement Documents (PRDs)
-            <span class="link-item-desc">Source of truth for feature requirements and specifications.</span>
-          </div>
+    <!-- Bucket 1: Platform Foundations -->
+    <div class="tile accent-dark">
+      <span class="tile-number">01 — Platform Foundations</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Platform Foundations</h2>
+      <p class="tile-desc">What Carson is and how it works.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Product Handbook<span class="tile-link-sub">Admin, iOS &amp; Android walkthrough</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-mid"></div>
-          <div class="link-item-text">
-            Zendesk (Customer Documentation)
-            <span class="link-item-desc">Customer-facing help center and support documentation.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>QA Testing Process<span class="tile-link-sub">Strategy, environments &amp; validation</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-mid"></div>
-          <div class="link-item-text">
-            Submit Bug or Feature Request (Jira)
-            <span class="link-item-desc">Central intake for bugs, enhancements, and requests.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Product Processes<span class="tile-link-sub">PRDs, grooming &amp; release workflows</span></div>
+        </a>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>System Architecture<span class="tile-link-sub">Current &amp; future state of the platform</span></div>
         </a>
       </div>
     </div>
 
-    <!-- BUCKET 4: Operations and Maintenance -->
-    <div class="bucket accent-green">
-      <div class="bucket-header">
-        <div class="bucket-icon green">⚙️</div>
-        <div class="bucket-header-text">
-          <h2>Operations and Maintenance</h2>
-          <p>How the platform is maintained and supported.</p>
-        </div>
+    <!-- Bucket 2: Integrations -->
+    <div class="tile">
+      <span class="tile-number">02 — Integrations</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Integrations</h2>
+      <p class="tile-desc">Detailed documentation for all external systems.</p>
+      <div class="tile-links">
+        <div class="tile-link-group">Hardware</div>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Dormakaba</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Salto</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Brivo</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Akuvox</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>2N</a>
+        <div class="tile-link-group">Software</div>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Yardi</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Eagle Eye Networks</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Flow</a>
       </div>
-      <div class="bucket-links">
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-green"></div>
-          <div class="link-item-text">
-            Error and Sync Handling Documentation
-            <span class="link-item-desc">Known issues, troubleshooting steps, and escalation guidance.</span>
-          </div>
+    </div>
+
+    <!-- Bucket 3: Build and Documentation -->
+    <div class="tile accent-blue">
+      <span class="tile-number">03 — Build &amp; Documentation</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Build &amp; Documentation</h2>
+      <p class="tile-desc">How product is defined, built, and documented.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Product Requirement Docs<span class="tile-link-sub">Source of truth for features &amp; specs</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-green"></div>
-          <div class="link-item-text">
-            DevOps and Database Documentation
-            <span class="link-item-desc">Infrastructure, monitoring, and data-related documentation.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Zendesk Docs<span class="tile-link-sub">Customer-facing help center</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-green"></div>
-          <div class="link-item-text">
-            Release Tracker
-            <span class="link-item-desc">Record of features, fixes, and updates that have been released.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Submit Bug / Feature (Jira)<span class="tile-link-sub">Central intake for bugs &amp; requests</span></div>
         </a>
       </div>
     </div>
 
-    <!-- BUCKET 5: Product Planning and Roadmap -->
-    <div class="bucket accent-indigo">
-      <div class="bucket-header">
-        <div class="bucket-icon indigo">🗓️</div>
-        <div class="bucket-header-text">
-          <h2>Product Planning and Roadmap</h2>
-          <p>What is being built and when.</p>
-        </div>
-      </div>
-      <div class="bucket-links">
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-indigo"></div>
-          <div class="link-item-text">
-            2026 Roadmap
-            <span class="link-item-desc">High-level product strategy and planned initiatives.</span>
-          </div>
+    <!-- Bucket 4: Operations and Maintenance -->
+    <div class="tile">
+      <span class="tile-number">04 — Operations &amp; Maintenance</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Operations &amp; Maintenance</h2>
+      <p class="tile-desc">How the platform is maintained and supported.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Error &amp; Sync Handling<span class="tile-link-sub">Known issues &amp; escalation guidance</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-indigo"></div>
-          <div class="link-item-text">
-            Sprint Release Schedule
-            <span class="link-item-desc">Timeline of upcoming releases and sprint cycles.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>DevOps &amp; Database Docs<span class="tile-link-sub">Infrastructure &amp; monitoring</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-indigo"></div>
-          <div class="link-item-text">
-            Jira Project (Carson Living)
-            <span class="link-item-desc">Active work tracking and backlog management.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Release Tracker<span class="tile-link-sub">Record of shipped features &amp; fixes</span></div>
         </a>
       </div>
     </div>
 
-    <!-- BUCKET 6: Team Operating Rhythm -->
-    <div class="bucket accent-grey">
-      <div class="bucket-header">
-        <div class="bucket-icon grey">🔄</div>
-        <div class="bucket-header-text">
-          <h2>Team Operating Rhythm</h2>
-          <p>How the team operates on a regular cadence.</p>
-        </div>
+    <!-- Bucket 5: Product Planning and Roadmap -->
+    <div class="tile accent-grey">
+      <span class="tile-number">05 — Planning &amp; Roadmap</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Product Planning &amp; Roadmap</h2>
+      <p class="tile-desc">What is being built and when.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>2026 Roadmap<span class="tile-link-sub">Strategy &amp; planned initiatives</span></div>
+        </a>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Sprint Release Schedule<span class="tile-link-sub">Upcoming releases &amp; sprint cycles</span></div>
+        </a>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Jira Project (Carson Living)<span class="tile-link-sub">Active work &amp; backlog management</span></div>
+        </a>
       </div>
-      <div class="bucket-links">
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-grey"></div>
-          <div class="link-item-text">
-            Daily Standup Notes
-            <span class="link-item-desc">Ongoing team updates and blockers.</span>
-          </div>
+    </div>
+
+    <!-- Bucket 6: Team Operating Rhythm -->
+    <div class="tile">
+      <span class="tile-number">06 — Team Operating Rhythm</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Team Operating Rhythm</h2>
+      <p class="tile-desc">How the team operates on a regular cadence.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Daily Standup Notes<span class="tile-link-sub">Ongoing updates &amp; blockers</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-grey"></div>
-          <div class="link-item-text">
-            Weekly Bug Meeting Notes
-            <span class="link-item-desc">Review of active issues and prioritization.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Weekly Bug Meeting Notes<span class="tile-link-sub">Active issues &amp; prioritization</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-grey"></div>
-          <div class="link-item-text">
-            Sprint Retrospectives
-            <span class="link-item-desc">Insights, learnings, and process improvements.</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Sprint Retrospectives<span class="tile-link-sub">Insights &amp; process improvements</span></div>
         </a>
-        <a class="link-item" href="#">
-          <div class="link-item-dot dot-grey"></div>
-          <div class="link-item-text">
-            Monthly Partner Call Notes
-            <span class="link-item-desc">Summaries and action items from partner discussions (e.g., Dormakaba).</span>
-          </div>
+        <a class="tile-link" href="#">
+          <div class="tile-link-bullet"></div>
+          <div>Monthly Partner Call Notes<span class="tile-link-sub">e.g. Dormakaba — summaries &amp; actions</span></div>
         </a>
+      </div>
+    </div>
+
+    <!-- Bucket 7: Hardware Integrations Overview -->
+    <div class="tile">
+      <span class="tile-number">07 — Hardware</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Hardware Integrations Overview</h2>
+      <p class="tile-desc">Summary of all hardware integrations with links to individual Confluence pages.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Dormakaba — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Salto — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Brivo — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Akuvox — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>2N — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Additional providers</a>
+      </div>
+    </div>
+
+    <!-- Bucket 8: Software Integrations Overview -->
+    <div class="tile accent-dark">
+      <span class="tile-number">08 — Software</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Software Integrations Overview</h2>
+      <p class="tile-desc">Summary of all software integrations with links to individual Confluence pages.</p>
+      <div class="tile-links">
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Yardi — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Eagle Eye Networks — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Flow — Confluence page</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Additional providers</a>
       </div>
     </div>
 
   </div>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <p><strong>Carson Internal Portal</strong> &nbsp;·&nbsp; For internal use only &nbsp;·&nbsp; Product Team &nbsp;·&nbsp; 2026</p>
+  <div class="footer-left">
+    <div class="footer-logo">
+      <div class="footer-logo-mark">C</div>
+      <span class="footer-name">carson</span>
+    </div>
+    <span class="footer-meta">Internal Portal &nbsp;·&nbsp; Product Team</span>
+  </div>
+  <div class="footer-right">For internal use only &nbsp;·&nbsp; 2026</div>
 </footer>
 
 </body>
