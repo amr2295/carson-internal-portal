@@ -47,7 +47,7 @@
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: var(--white);
@@ -60,8 +60,7 @@
     .nav-logo-mark {
       width: 28px; height: 28px; background: var(--black); border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--white); font-family: 'PP Neue Montreal', sans-serif;
-      font-weight: 500; font-size: 13px;
+      color: var(--white); font-family: 'PP Neue Montreal', sans-serif; font-weight: 500; font-size: 13px;
     }
     .nav-wordmark { font-family: 'PP Neue Montreal', sans-serif; font-weight: 500; font-size: 15px; color: var(--black); letter-spacing: -0.2px; }
     .nav-divider { width: 1px; height: 18px; background: var(--grey-300); }
@@ -69,32 +68,21 @@
     .nav-right { display: flex; align-items: center; gap: 8px; }
     .nav-pill { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--grey-700); background: var(--grey-100); padding: 5px 12px; border-radius: 100px; }
     .nav-pill-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
-    /* ── HERO ── */
+    /* HERO */
     .hero { background: var(--black); padding: 80px 40px 88px; position: relative; overflow: hidden; }
     .hero-inner { max-width: 1200px; margin: 0 auto; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'PP Neue Montreal', sans-serif; font-size: 12px; font-weight: 500;
-      letter-spacing: 1px; text-transform: uppercase; color: var(--grey-500); margin-bottom: 24px;
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'PP Neue Montreal', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-500); margin-bottom: 24px; }
     .hero-eyebrow-dot { width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
-    .hero h1 {
-      font-family: 'FH Oscar', sans-serif; font-weight: 400;
-      font-size: clamp(48px, 7vw, 80px); line-height: 1.0; letter-spacing: -2px;
-      color: var(--white); max-width: 700px; margin-bottom: 24px;
-    }
+    .hero h1 { font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 1.0; letter-spacing: -2px; color: var(--white); max-width: 700px; margin-bottom: 24px; }
     .hero-sub { font-size: 16px; color: var(--grey-500); max-width: 420px; line-height: 1.6; font-weight: 400; }
-    /* ── MAIN ── */
+    /* MAIN */
     main { max-width: 1200px; margin: 0 auto; padding: 64px 40px 100px; }
-    /* ── SECTION HEADER ── */
+    /* SECTION HEADER */
     .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
     .section-label { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--grey-500); }
     .section-rule { flex: 1; height: 1px; background: var(--grey-300); }
-    /* ── RESOURCE HUB BANNER (Bucket 0) ── */
-    .hub-banner {
-      background: var(--white); border: 1px solid var(--grey-300); border-radius: 4px;
-      display: grid; grid-template-columns: 1fr 1fr 1fr; overflow: hidden; margin-bottom: 56px;
-    }
+    /* RESOURCE HUB BANNER */
+    .hub-banner { background: var(--white); border: 1px solid var(--grey-300); border-radius: 4px; display: grid; grid-template-columns: 1fr 1fr 1fr; overflow: hidden; margin-bottom: 56px; }
     .hub-cell { padding: 36px 36px 32px; border-right: 1px solid var(--grey-300); position: relative; transition: background 0.15s; }
     .hub-cell:last-child { border-right: none; }
     .hub-cell:hover { background: var(--grey-50); }
@@ -103,18 +91,11 @@
     .hub-cell p { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin-bottom: 20px; }
     .hub-cell-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 1px; transition: color 0.15s, border-color 0.15s; }
     .hub-cell-link:hover { color: var(--blue); border-color: var(--blue); }
-    .hub-cell-link::after { content: '↗'; font-size: 12px; }
-    /* ── TILES GRID ── */
-    .tiles-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-      border: 1px solid var(--grey-300); border-radius: 4px; overflow: hidden; margin-bottom: 56px;
-    }
-    /* ── TILE ── */
-    .tile {
-      background: var(--white); border-right: 1px solid var(--grey-300); border-bottom: 1px solid var(--grey-300);
-      padding: 32px 28px 28px; display: flex; flex-direction: column; gap: 0;
-      position: relative; text-decoration: none; color: inherit; transition: background 0.15s; min-height: 340px;
-    }
+    .hub-cell-link::after { content: '\2197'; font-size: 12px; }
+    /* TILES GRID */
+    .tiles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--grey-300); border-radius: 4px; overflow: hidden; margin-bottom: 56px; }
+    /* TILE */
+    .tile { background: var(--white); border-right: 1px solid var(--grey-300); border-bottom: 1px solid var(--grey-300); padding: 32px 28px 28px; display: flex; flex-direction: column; gap: 0; position: relative; text-decoration: none; color: inherit; transition: background 0.15s; min-height: 340px; }
     .tile:nth-child(4n) { border-right: none; }
     .tile:nth-last-child(-n+4) { border-bottom: none; }
     .tile:hover { background: var(--grey-50); }
@@ -129,11 +110,9 @@
     .tile-link-bullet { width: 4px; height: 4px; border-radius: 50%; background: var(--grey-300); flex-shrink: 0; margin-top: 6px; transition: background 0.12s; }
     .tile-link:hover .tile-link-bullet { background: var(--blue); }
     .tile-link-sub { display: block; font-size: 11.5px; color: var(--grey-500); margin-top: 2px; }
-    /* Sub-links inside tiles */
     .tile-sublinks { display: flex; flex-direction: column; gap: 0; margin-left: 12px; border-left: 1px solid var(--grey-200, #e5e5e0); padding-left: 12px; margin-bottom: 4px; }
     .tile-sublink { display: block; padding: 4px 0; text-decoration: none; color: var(--grey-500); font-size: 12px; transition: color 0.12s; }
     .tile-sublink:hover { color: var(--blue); }
-    /* Group label inside tile links */
     .tile-link-group { font-size: 11px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: var(--grey-500); padding: 10px 0 4px; border-top: 1px solid var(--grey-100); margin-top: 4px; }
     .tile-link-group:first-child { border-top: none; margin-top: 0; padding-top: 0; }
     /* Blue accent tile */
@@ -146,6 +125,7 @@
     .tile.accent-blue .tile-link:hover { color: var(--white); }
     .tile.accent-blue .tile-link-bullet { background: rgba(255,255,255,0.35); }
     .tile.accent-blue .tile-link:hover .tile-link-bullet { background: var(--white); }
+    .tile.accent-blue .tile-link-group { color: rgba(255,255,255,0.5); border-top-color: rgba(255,255,255,0.2); }
     /* Dark tile */
     .tile.accent-dark { background: var(--black); }
     .tile.accent-dark:hover { background: var(--grey-900); }
@@ -164,7 +144,7 @@
     /* Grey tile */
     .tile.accent-grey { background: var(--grey-100); }
     .tile.accent-grey:hover { background: #e9e8e3; }
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { border-top: 1px solid var(--grey-300); background: var(--white); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; }
     .footer-left { display: flex; align-items: center; gap: 20px; }
     .footer-logo { display: flex; align-items: center; gap: 8px; }
@@ -172,7 +152,7 @@
     .footer-name { font-size: 13px; font-weight: 500; color: var(--black); }
     .footer-meta { font-size: 12px; color: var(--grey-500); }
     .footer-right { font-size: 12px; color: var(--grey-500); }
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 1100px) {
       .tiles-grid { grid-template-columns: repeat(2, 1fr); }
       .tile:nth-child(4n) { border-right: 1px solid var(--grey-300); }
@@ -197,276 +177,314 @@
   </style>
 </head>
 <body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-left">
+      <a class="nav-logo" href="#">
+        <div class="nav-logo-mark">C</div>
+        <span class="nav-wordmark">carson</span>
+      </a>
+      <div class="nav-divider"></div>
+      <span class="nav-subtitle">Internal Portal</span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-pill">
+        <div class="nav-pill-dot"></div>
+        Internal use only
+      </div>
+    </div>
+  </nav>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-left">
-    <a class="nav-logo" href="#">
-      <div class="nav-logo-mark">C</div>
-      <span class="nav-wordmark">carson</span>
-    </a>
-    <div class="nav-divider"></div>
-    <span class="nav-subtitle">Internal Portal</span>
-  </div>
-  <div class="nav-right">
-    <div class="nav-pill">
-      <div class="nav-pill-dot"></div>
-      Internal use only
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-dot"></span>
-      Product Resource Hub
-    </div>
-    <h1>One portal.<br>All product.</h1>
-    <p class="hero-sub">Your central hub for Carson platform documentation, processes, integrations, and team resources.</p>
-  </div>
-</div>
-
-<main>
-  <!-- BUCKET 0: Resource Hub -->
-  <div class="section-header">
-    <span class="section-label">Start here</span>
-    <div class="section-rule"></div>
-  </div>
-  <div class="hub-banner">
-    <div class="hub-cell">
-      <div class="hub-cell-tag">01</div>
-      <h3>What is Carson</h3>
-      <p>Overview of the Carson platform, its purpose, and what it delivers for property managers and residents.</p>
-      <a class="hub-cell-link" href="#">Read overview</a>
-    </div>
-    <div class="hub-cell">
-      <div class="hub-cell-tag">02</div>
-      <h3>How to Navigate</h3>
-      <p>A guide to using this internal portal and finding the resources you need quickly.</p>
-      <a class="hub-cell-link" href="#">View guide</a>
-    </div>
-    <div class="hub-cell">
-      <div class="hub-cell-tag">03</div>
-      <h3>Key Contacts</h3>
-      <p>Who to reach for product, engineering, QA, design, and partner support across the team.</p>
-      <a class="hub-cell-link" href="#">View contacts</a>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Product Resource Hub
+      </div>
+      <h1>One portal.<br>All product.</h1>
+      <p class="hero-sub">Your central hub for Carson platform documentation, processes, integrations, and team resources.</p>
     </div>
   </div>
 
-  <!-- BUCKETS 1–N -->
-  <div class="section-header">
-    <span class="section-label">Documentation &amp; Resources</span>
-    <div class="section-rule"></div>
-  </div>
-  <div class="tiles-grid">
-
-    <!-- Bucket 1: Platform Foundations -->
-    <div class="tile accent-dark">
-      <span class="tile-number">01 — Platform Foundations</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Platform Foundations</h2>
-      <p class="tile-desc">What Carson is and how it works.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="https://internal-carson-product.pages.dev/">
-          <div class="tile-link-bullet"></div>
-          <div>Product Handbook<span class="tile-link-sub">Admin, iOS &amp; Android walkthrough</span></div>
-        </a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/434634767/QA">
-          <div class="tile-link-bullet"></div>
-          <div>QA Testing Process<span class="tile-link-sub">Strategy, environments &amp; validation</span></div>
-        </a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/327417859/PRDs+Product+Requirement+Documents">
-          <div class="tile-link-bullet"></div>
-          <div>Product Processes<span class="tile-link-sub">PRDs, grooming &amp; release workflows</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>System Architecture<span class="tile-link-sub">Current &amp; future state of the platform</span></div>
-        </a>
+  <main>
+    <!-- BUCKET 0: Resource Hub -->
+    <div class="section-header">
+      <span class="section-label">Start here</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="hub-banner">
+      <div class="hub-cell">
+        <div class="hub-cell-tag">01</div>
+        <h3>What is Carson</h3>
+        <p>Overview of the Carson platform, its purpose, and what it delivers for property managers and residents.</p>
+        <a class="hub-cell-link" href="#">Read overview</a>
+      </div>
+      <div class="hub-cell">
+        <div class="hub-cell-tag">02</div>
+        <h3>How to Navigate</h3>
+        <p>A guide to using this internal portal and finding the resources you need quickly.</p>
+        <a class="hub-cell-link" href="#">View guide</a>
+      </div>
+      <div class="hub-cell">
+        <div class="hub-cell-tag">03</div>
+        <h3>Key Contacts</h3>
+        <p>Who to reach for product, engineering, QA, design, and partner support across the team.</p>
+        <a class="hub-cell-link" href="#">View contacts</a>
       </div>
     </div>
 
-    <!-- Bucket 2: Connectivity of Hardware Integrations -->
-    <div class="tile">
-      <span class="tile-number">02 — Connectivity</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Connectivity of Hardware Integrations</h2>
-      <p class="tile-desc">The two methods of how Carson integrates with hardware.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335001089/Port+Forwarding">
-          <div class="tile-link-bullet"></div>
-          <div>Port Forwarding</div>
-        </a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335033857/Cloud">
-          <div class="tile-link-bullet"></div>
-          <div>Cloud</div>
-        </a>
+    <!-- BUCKETS 1+ -->
+    <div class="section-header">
+      <span class="section-label">Documentation &amp; Resources</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="tiles-grid">
+
+      <!-- Tile 1: Platform Foundations -->
+      <div class="tile accent-dark">
+        <span class="tile-number">01 &mdash; Platform Foundations</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Platform Foundations</h2>
+        <p class="tile-desc">What Carson is and how it works.</p>
+        <div class="tile-links">
+          <a class="tile-link" href="https://internal-carson-product.pages.dev/">
+            <div class="tile-link-bullet"></div>
+            <div>Product Handbook<span class="tile-link-sub">Admin, iOS &amp; Android walkthrough</span></div>
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/434634767/QA">
+            <div class="tile-link-bullet"></div>
+            <div>QA Testing Process<span class="tile-link-sub">Strategy, environments &amp; validation</span></div>
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/327417859/PRDs+Product+Requirement+Documents">
+            <div class="tile-link-bullet"></div>
+            <div>Product Processes<span class="tile-link-sub">PRDs, grooming &amp; release workflows</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>System Architecture<span class="tile-link-sub">Current &amp; future state of the platform</span></div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 3: Build and Documentation -->
-    <div class="tile accent-blue">
-      <span class="tile-number">03 — Build &amp; Documentation</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Build &amp; Documentation</h2>
-      <p class="tile-desc">How product is defined, built, and documented.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Product Requirement Docs<span class="tile-link-sub">Source of truth for features &amp; specs</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Zendesk Docs<span class="tile-link-sub">Customer-facing help center</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Submit Bug / Feature (Jira)<span class="tile-link-sub">Central intake for bugs &amp; requests</span></div>
-        </a>
+      <!-- Tile 2: Connectivity of Hardware Integrations -->
+      <div class="tile">
+        <span class="tile-number">02 &mdash; Connectivity</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Connectivity of Hardware Integrations</h2>
+        <p class="tile-desc">The two methods of how Carson integrates with hardware.</p>
+        <div class="tile-links">
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335001089/Port+Forwarding">
+            <div class="tile-link-bullet"></div>
+            <div>Port Forwarding<span class="tile-link-sub">Network-level hardware connectivity</span></div>
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335033857/Cloud">
+            <div class="tile-link-bullet"></div>
+            <div>Cloud<span class="tile-link-sub">Cloud-based hardware connectivity</span></div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 4: Operations and Maintenance -->
-    <div class="tile">
-      <span class="tile-number">04 — Operations &amp; Maintenance</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Operations &amp; Maintenance</h2>
-      <p class="tile-desc">How the platform is maintained and supported.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Error &amp; Sync Handling<span class="tile-link-sub">Known issues &amp; escalation guidance</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>DevOps &amp; Database Docs<span class="tile-link-sub">Infrastructure &amp; monitoring</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Release Tracker<span class="tile-link-sub">Record of shipped features &amp; fixes</span></div>
-        </a>
+      <!-- Tile 3: Hardware Integrations -->
+      <div class="tile accent-blue">
+        <span class="tile-number">03 &mdash; Hardware Integrations</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Hardware Integrations</h2>
+        <p class="tile-desc">Detailed documentation for all external systems.</p>
+        <div class="tile-links">
+          <div class="tile-link-group">Intercoms</div>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1134690315/2N+-">
+            <div class="tile-link-bullet"></div>2N
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/x/DoAzG">
+            <div class="tile-link-bullet"></div>Akuvox
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/33685540/Comelit">
+            <div class="tile-link-bullet"></div>Comelit
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334673410/BMX">
+            <div class="tile-link-bullet"></div>ButterflyMX (BMX)
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334476802/Carson+Panel+Legacy+Intercom">
+            <div class="tile-link-bullet"></div>Carson Panel (Legacy)
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334837251/ATA+Adapter+for+Legacy+Intercom+Takeover+and+SIP+Integration">
+            <div class="tile-link-bullet"></div>ATA Adapter (Legacy)
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334935553/Intercom+Comparison+Table">
+            <div class="tile-link-bullet"></div>Intercom Comparison Table
+          </a>
+          <div class="tile-link-group">Access Control</div>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/33554447/Brivo">
+            <div class="tile-link-bullet"></div>Brivo
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335296001/Dormakaba+Community+Background">
+            <div class="tile-link-bullet"></div>Dormakaba Community
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335394319/Dormakaba+Lyazon+Background">
+            <div class="tile-link-bullet"></div>Dormakaba Lyazon
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334509578/Smartair+Background">
+            <div class="tile-link-bullet"></div>Smartair
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335394334/Salto+Background">
+            <div class="tile-link-bullet"></div>Salto
+          </a>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335492609/Access+Control+Comparison+Table">
+            <div class="tile-link-bullet"></div>Access Control Comparison Table
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 5: Hardware Integrations -->
-    <div class="tile">
-      <span class="tile-number">05 — Hardware Integrations</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Hardware Integrations</h2>
-      <p class="tile-desc">Detailed documentation for all external systems.</p>
-      <div class="tile-links">
-        <div class="tile-link-group">Intercoms</div>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1134690315/2N+-"><div class="tile-link-bullet"></div>2N</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/x/DoAzG"><div class="tile-link-bullet"></div>Akuvox</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/33685540/Comelit"><div class="tile-link-bullet"></div>Comelit</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334673410/BMX"><div class="tile-link-bullet"></div>ButterflyMX (BMX)</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334476802/Carson+Panel+Legacy+Intercom"><div class="tile-link-bullet"></div>Carson Panel (Legacy)</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334837251/ATA+Adapter+for+Legacy+Intercom+Takeover+and+SIP+Integration"><div class="tile-link-bullet"></div>ATA Adapter (Legacy)</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334935553/Intercom+Comparison+Table"><div class="tile-link-bullet"></div>Intercom Comparison Table</a>
-        <div class="tile-link-group">Access Control</div>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/33554447/Brivo"><div class="tile-link-bullet"></div>Brivo</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335296001/Dormakaba+Community+Background"><div class="tile-link-bullet"></div>Dormakaba Community</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335394319/Dormakaba+Lyazon+Background"><div class="tile-link-bullet"></div>Dormakaba Lyazon</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334509578/Smartair+Background"><div class="tile-link-bullet"></div>Smartair</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335394334/Salto+Background"><div class="tile-link-bullet"></div>Salto</a>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335492609/Access+Control+Comparison+Table"><div class="tile-link-bullet"></div>Access Control Comparison Table</a>
+      <!-- Tile 4: Cameras & Smart Home -->
+      <div class="tile">
+        <span class="tile-number">04 &mdash; Cameras &amp; Smart Home</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Cameras &amp; Smart Home</h2>
+        <p class="tile-desc">Documentation for camera systems and smart home integrations.</p>
+        <div class="tile-links">
+          <div class="tile-link-group">Cameras</div>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335263237/Eagle+Eye+Networks">
+            <div class="tile-link-bullet"></div>Eagle Eye Networks
+          </a>
+          <div class="tile-link-group">Smart Home</div>
+          <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334345731/Ecobee+Background">
+            <div class="tile-link-bullet"></div>Ecobee
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 6: Cameras & Smart Home -->
-    <div class="tile accent-grey">
-      <span class="tile-number">06 — Cameras &amp; Smart Home</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Cameras &amp; Smart Home</h2>
-      <p class="tile-desc">Documentation for camera systems and smart home devices.</p>
-      <div class="tile-links">
-        <div class="tile-link-group">Cameras</div>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335263237/Eagle+Eye+Networks"><div class="tile-link-bullet"></div>Eagle Eye Networks</a>
-        <div class="tile-link-group">Smart Home</div>
-        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334345731/Ecobee+Background"><div class="tile-link-bullet"></div>Ecobee</a>
+      <!-- Tile 5: Software Integrations -->
+      <div class="tile accent-grey">
+        <span class="tile-number">05 &mdash; Software Integrations</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Software Integrations</h2>
+        <p class="tile-desc">Documentation for all software and PMS integrations.</p>
+        <div class="tile-links">
+          <div class="tile-link-group">Property Management Systems (PMS)</div>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>Yardi
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>AppFolio
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>RealPage
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>Entrata
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>ClickPay
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 7: Product Planning and Roadmap -->
-    <div class="tile">
-      <span class="tile-number">07 — Planning &amp; Roadmap</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Product Planning &amp; Roadmap</h2>
-      <p class="tile-desc">What is being built and when.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>2026 Roadmap<span class="tile-link-sub">Strategy &amp; planned initiatives</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Sprint Release Schedule<span class="tile-link-sub">Upcoming releases &amp; sprint cycles</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Jira Project (Carson Living)<span class="tile-link-sub">Active work &amp; backlog management</span></div>
-        </a>
+      <!-- Tile 6: Build & Documentation -->
+      <div class="tile">
+        <span class="tile-number">06 &mdash; Build &amp; Documentation</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Build &amp; Documentation</h2>
+        <p class="tile-desc">How product is defined, built, and documented.</p>
+        <div class="tile-links">
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Product Requirement Docs<span class="tile-link-sub">Source of truth for features &amp; specs</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Zendesk Docs<span class="tile-link-sub">Customer-facing help center</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Submit Bug / Feature (Jira)<span class="tile-link-sub">Central intake for bugs &amp; requests</span></div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 8: Team Operating Rhythm -->
-    <div class="tile">
-      <span class="tile-number">08 — Team Operating Rhythm</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Team Operating Rhythm</h2>
-      <p class="tile-desc">How the team operates on a regular cadence.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Daily Standup Notes<span class="tile-link-sub">Ongoing updates &amp; blockers</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Weekly Bug Meeting Notes<span class="tile-link-sub">Active issues &amp; prioritization</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Sprint Retrospectives<span class="tile-link-sub">Insights &amp; process improvements</span></div>
-        </a>
-        <a class="tile-link" href="#">
-          <div class="tile-link-bullet"></div>
-          <div>Monthly Partner Call Notes<span class="tile-link-sub">e.g. Dormakaba — summaries &amp; actions</span></div>
-        </a>
+      <!-- Tile 7: Operations & Maintenance -->
+      <div class="tile accent-dark">
+        <span class="tile-number">07 &mdash; Operations &amp; Maintenance</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Operations &amp; Maintenance</h2>
+        <p class="tile-desc">How the platform is maintained and supported.</p>
+        <div class="tile-links">
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Error &amp; Sync Handling<span class="tile-link-sub">Known issues &amp; escalation guidance</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>DevOps &amp; Database Docs<span class="tile-link-sub">Infrastructure &amp; monitoring</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Release Tracker<span class="tile-link-sub">Record of shipped features &amp; fixes</span></div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Bucket 9: Software Integrations -->
-    <div class="tile accent-dark">
-      <span class="tile-number">09 — Software Integrations</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Software Integrations</h2>
-      <p class="tile-desc">Documentation for all software and PMS integrations.</p>
-      <div class="tile-links">
-        <div class="tile-link-group">Property Management Systems (PMS)</div>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Yardi</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>AppFolio</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>RealPage</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Entrata</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>ClickPay</a>
+      <!-- Tile 8: Product Planning & Roadmap -->
+      <div class="tile">
+        <span class="tile-number">08 &mdash; Planning &amp; Roadmap</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Product Planning &amp; Roadmap</h2>
+        <p class="tile-desc">What is being built and when.</p>
+        <div class="tile-links">
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>2026 Roadmap<span class="tile-link-sub">Strategy &amp; planned initiatives</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Sprint Release Schedule<span class="tile-link-sub">Upcoming releases &amp; sprint cycles</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Jira Project (Carson Living)<span class="tile-link-sub">Active work &amp; backlog management</span></div>
+          </a>
+        </div>
       </div>
+
+      <!-- Tile 9: Team Operating Rhythm -->
+      <div class="tile">
+        <span class="tile-number">09 &mdash; Team Operating Rhythm</span>
+        <span class="tile-icon">&#x2B61;</span>
+        <h2>Team Operating Rhythm</h2>
+        <p class="tile-desc">How the team operates on a regular cadence.</p>
+        <div class="tile-links">
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Daily Standup Notes<span class="tile-link-sub">Ongoing updates &amp; blockers</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Weekly Bug Meeting Notes<span class="tile-link-sub">Active issues &amp; prioritization</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Sprint Retrospectives<span class="tile-link-sub">Insights &amp; process improvements</span></div>
+          </a>
+          <a class="tile-link" href="#">
+            <div class="tile-link-bullet"></div>
+            <div>Monthly Partner Call Notes<span class="tile-link-sub">e.g. Dormakaba &mdash; summaries &amp; actions</span></div>
+          </a>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-  </div>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-left">
-    <div class="footer-logo">
-      <div class="footer-logo-mark">C</div>
-      <span class="footer-name">carson</span>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">
+        <div class="footer-logo-mark">C</div>
+        <span class="footer-name">carson</span>
+      </div>
+      <span class="footer-meta">Internal Portal &nbsp;&middot;&nbsp; Product Team</span>
     </div>
-    <span class="footer-meta">Internal Portal &nbsp;&middot;&nbsp; Product Team</span>
-  </div>
-  <div class="footer-right">For internal use only &nbsp;&middot;&nbsp; 2026</div>
-</footer>
-
+    <div class="footer-right">For internal use only &nbsp;&middot;&nbsp; 2026</div>
+  </footer>
 </body>
 </html>
