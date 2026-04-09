@@ -11,7 +11,7 @@
       font-weight: 500;
       font-style: normal;
     }
-    @font-face 
+    @font-face {
       font-family: 'PP Neue Montreal';
       src: url('https://cdn.prod.website-files.com/6597b38942f1fe5180e52807/6597bbdaa7aa7cca90cf82d7_PPNeueMontreal-Book.woff') format('woff');
       font-weight: 400;
@@ -23,26 +23,22 @@
       font-weight: 400;
       font-style: normal;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --black:       #161616;
-      --grey-900:    #222222;
-      --grey-700:    #525252;
-      --grey-500:    #a1a09b;
-      --grey-300:    #d3d2cd;
-      --grey-100:    #f1f0eb;
-      --grey-50:     #f7f6f2;
-      --white:       #ffffff;
-      --blue:        #054bff;
-      --blue-hover:  #0340d9;
-      --green:       #1ab87a;
+      --black: #161616;
+      --grey-900: #222222;
+      --grey-700: #525252;
+      --grey-500: #a1a09b;
+      --grey-300: #d3d2cd;
+      --grey-100: #f1f0eb;
+      --grey-50: #f7f6f2;
+      --white: #ffffff;
+      --blue: #054bff;
+      --blue-hover: #0340d9;
+      --green: #1ab87a;
       --green-light: #e8faf2;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'PP Neue Montreal', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--grey-50);
@@ -51,401 +47,105 @@
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
-
     /* ── NAV ── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: var(--white);
       border-bottom: 1px solid var(--grey-300);
-      height: 60px;
-      display: flex;
-      align-items: center;
-      padding: 0 40px;
-      justify-content: space-between;
+      height: 60px; display: flex; align-items: center;
+      padding: 0 40px; justify-content: space-between;
     }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--black);
-    }
-
+    .nav-left { display: flex; align-items: center; gap: 20px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--black); }
     .nav-logo-mark {
-      width: 28px;
-      height: 28px;
-      background: var(--black);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-family: 'PP Neue Montreal', sans-serif;
-      font-weight: 500;
-      font-size: 13px;
+      width: 28px; height: 28px; background: var(--black); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-family: 'PP Neue Montreal', sans-serif;
+      font-weight: 500; font-size: 13px;
     }
-
-    .nav-wordmark {
-      font-family: 'PP Neue Montreal', sans-serif;
-      font-weight: 500;
-      font-size: 15px;
-      color: var(--black);
-      letter-spacing: -0.2px;
-    }
-
-    .nav-divider {
-      width: 1px;
-      height: 18px;
-      background: var(--grey-300);
-    }
-
-    .nav-subtitle {
-      font-size: 13px;
-      color: var(--grey-500);
-      font-weight: 400;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-pill {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--grey-700);
-      background: var(--grey-100);
-      padding: 5px 12px;
-      border-radius: 100px;
-    }
-
-    .nav-pill-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--green);
-      border-radius: 50%;
-    }
-
+    .nav-wordmark { font-family: 'PP Neue Montreal', sans-serif; font-weight: 500; font-size: 15px; color: var(--black); letter-spacing: -0.2px; }
+    .nav-divider { width: 1px; height: 18px; background: var(--grey-300); }
+    .nav-subtitle { font-size: 13px; color: var(--grey-500); font-weight: 400; }
+    .nav-right { display: flex; align-items: center; gap: 8px; }
+    .nav-pill { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--grey-700); background: var(--grey-100); padding: 5px 12px; border-radius: 100px; }
+    .nav-pill-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
     /* ── HERO ── */
-    .hero {
-      background: var(--black);
-      padding: 80px 40px 88px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
+    .hero { background: var(--black); padding: 80px 40px 88px; position: relative; overflow: hidden; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; }
     .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'PP Neue Montreal', sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--grey-500);
-      margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'PP Neue Montreal', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--grey-500); margin-bottom: 24px;
     }
-
-    .hero-eyebrow-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--blue);
-      border-radius: 50%;
-    }
-
+    .hero-eyebrow-dot { width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
     .hero h1 {
-      font-family: 'FH Oscar', sans-serif;
-      font-weight: 400;
-      font-size: clamp(48px, 7vw, 80px);
-      line-height: 1.0;
-      letter-spacing: -2px;
-      color: var(--white);
-      max-width: 700px;
-      margin-bottom: 24px;
+      font-family: 'FH Oscar', sans-serif; font-weight: 400;
+      font-size: clamp(48px, 7vw, 80px); line-height: 1.0; letter-spacing: -2px;
+      color: var(--white); max-width: 700px; margin-bottom: 24px;
     }
-
-    .hero-sub {
-      font-size: 16px;
-      color: var(--grey-500);
-      max-width: 420px;
-      line-height: 1.6;
-      font-weight: 400;
-    }
-
+    .hero-sub { font-size: 16px; color: var(--grey-500); max-width: 420px; line-height: 1.6; font-weight: 400; }
     /* ── MAIN ── */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 64px 40px 100px;
-    }
-
+    main { max-width: 1200px; margin: 0 auto; padding: 64px 40px 100px; }
     /* ── SECTION HEADER ── */
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: var(--grey-500);
-    }
-
-    .section-rule {
-      flex: 1;
-      height: 1px;
-      background: var(--grey-300);
-    }
-
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--grey-500); }
+    .section-rule { flex: 1; height: 1px; background: var(--grey-300); }
     /* ── RESOURCE HUB BANNER (Bucket 0) ── */
     .hub-banner {
-      background: var(--white);
-      border: 1px solid var(--grey-300);
-      border-radius: 4px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      overflow: hidden;
-      margin-bottom: 56px;
+      background: var(--white); border: 1px solid var(--grey-300); border-radius: 4px;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; overflow: hidden; margin-bottom: 56px;
     }
-
-    .hub-cell {
-      padding: 36px 36px 32px;
-      border-right: 1px solid var(--grey-300);
-      position: relative;
-      transition: background 0.15s;
-    }
-
+    .hub-cell { padding: 36px 36px 32px; border-right: 1px solid var(--grey-300); position: relative; transition: background 0.15s; }
     .hub-cell:last-child { border-right: none; }
     .hub-cell:hover { background: var(--grey-50); }
-
-    .hub-cell-tag {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--grey-500);
-      margin-bottom: 12px;
-    }
-
-    .hub-cell h3 {
-      font-family: 'FH Oscar', sans-serif;
-      font-weight: 400;
-      font-size: 22px;
-      letter-spacing: -0.5px;
-      color: var(--black);
-      margin-bottom: 10px;
-      line-height: 1.15;
-    }
-
-    .hub-cell p {
-      font-size: 13px;
-      color: var(--grey-500);
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .hub-cell-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--black);
-      text-decoration: none;
-      border-bottom: 1px solid var(--black);
-      padding-bottom: 1px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
+    .hub-cell-tag { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-500); margin-bottom: 12px; }
+    .hub-cell h3 { font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: 22px; letter-spacing: -0.5px; color: var(--black); margin-bottom: 10px; line-height: 1.15; }
+    .hub-cell p { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin-bottom: 20px; }
+    .hub-cell-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 1px; transition: color 0.15s, border-color 0.15s; }
     .hub-cell-link:hover { color: var(--blue); border-color: var(--blue); }
-
-    .hub-cell-link::after {
-      content: '↗';
-      font-size: 12px;
-    }
-
+    .hub-cell-link::after { content: '↗'; font-size: 12px; }
     /* ── TILES GRID ── */
     .tiles-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      border: 1px solid var(--grey-300);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 56px;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      border: 1px solid var(--grey-300); border-radius: 4px; overflow: hidden; margin-bottom: 56px;
     }
-
     /* ── TILE ── */
     .tile {
-      background: var(--white);
-      border-right: 1px solid var(--grey-300);
-      border-bottom: 1px solid var(--grey-300);
-      padding: 32px 28px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.15s;
-      min-height: 340px;
+      background: var(--white); border-right: 1px solid var(--grey-300); border-bottom: 1px solid var(--grey-300);
+      padding: 32px 28px 28px; display: flex; flex-direction: column; gap: 0;
+      position: relative; text-decoration: none; color: inherit; transition: background 0.15s; min-height: 340px;
     }
-
     .tile:nth-child(4n) { border-right: none; }
     .tile:nth-last-child(-n+4) { border-bottom: none; }
     .tile:hover { background: var(--grey-50); }
-
-    .tile-number {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      color: var(--grey-500);
-      margin-bottom: 20px;
-      font-family: 'PP Neue Montreal', sans-serif;
-    }
-
-    .tile-icon {
-      font-size: 22px;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .tile h2 {
-      font-family: 'FH Oscar', sans-serif;
-      font-weight: 400;
-      font-size: 19px;
-      letter-spacing: -0.4px;
-      line-height: 1.2;
-      color: var(--black);
-      margin-bottom: 10px;
-    }
-
-    .tile-desc {
-      font-size: 13px;
-      color: var(--grey-500);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-
-    .tile-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border-top: 1px solid var(--grey-100);
-      padding-top: 16px;
-      margin-top: auto;
-    }
-
-    .tile-link {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      padding: 8px 0;
-      text-decoration: none;
-      color: var(--grey-700);
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 1.4;
-      border-bottom: 1px solid transparent;
-      transition: color 0.12s;
-    }
-
+    .tile-number { font-size: 11px; font-weight: 500; letter-spacing: 1px; color: var(--grey-500); margin-bottom: 20px; font-family: 'PP Neue Montreal', sans-serif; }
+    .tile-icon { font-size: 22px; margin-bottom: 16px; display: block; }
+    .tile h2 { font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: 19px; letter-spacing: -0.4px; line-height: 1.2; color: var(--black); margin-bottom: 10px; }
+    .tile-desc { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin-bottom: 24px; flex: 1; }
+    .tile-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--grey-100); padding-top: 16px; margin-top: auto; }
+    .tile-link { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; text-decoration: none; color: var(--grey-700); font-size: 13px; font-weight: 400; line-height: 1.4; border-bottom: 1px solid transparent; transition: color 0.12s; }
     .tile-link:last-child { border-bottom: none; }
-
     .tile-link:hover { color: var(--blue); }
-
-    .tile-link-bullet {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--grey-300);
-      flex-shrink: 0;
-      margin-top: 6px;
-      transition: background 0.12s;
-    }
-
+    .tile-link-bullet { width: 4px; height: 4px; border-radius: 50%; background: var(--grey-300); flex-shrink: 0; margin-top: 6px; transition: background 0.12s; }
     .tile-link:hover .tile-link-bullet { background: var(--blue); }
-
-    .tile-link-sub {
-      display: block;
-      font-size: 11.5px;
-      color: var(--grey-500);
-      margin-top: 2px;
-    }
-
+    .tile-link-sub { display: block; font-size: 11.5px; color: var(--grey-500); margin-top: 2px; }
     /* Sub-links inside tiles */
-    .tile-sublinks {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin-left: 12px;
-      border-left: 1px solid var(--grey-200, #e5e5e0);
-      padding-left: 12px;
-      margin-bottom: 4px;
-    }
-
-    .tile-sublink {
-      display: block;
-      padding: 4px 0;
-      text-decoration: none;
-      color: var(--grey-500);
-      font-size: 12px;
-      transition: color 0.12s;
-    }
-
+    .tile-sublinks { display: flex; flex-direction: column; gap: 0; margin-left: 12px; border-left: 1px solid var(--grey-200, #e5e5e0); padding-left: 12px; margin-bottom: 4px; }
+    .tile-sublink { display: block; padding: 4px 0; text-decoration: none; color: var(--grey-500); font-size: 12px; transition: color 0.12s; }
     .tile-sublink:hover { color: var(--blue); }
-
     /* Group label inside tile links */
-    .tile-link-group {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      color: var(--grey-500);
-      padding: 10px 0 4px;
-      border-top: 1px solid var(--grey-100);
-      margin-top: 4px;
-    }
-
+    .tile-link-group { font-size: 11px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: var(--grey-500); padding: 10px 0 4px; border-top: 1px solid var(--grey-100); margin-top: 4px; }
     .tile-link-group:first-child { border-top: none; margin-top: 0; padding-top: 0; }
-
     /* Blue accent tile */
     .tile.accent-blue { background: var(--blue); }
     .tile.accent-blue:hover { background: var(--blue-hover); }
-    .tile.accent-blue .tile-number,
-    .tile.accent-blue h2,
-    .tile.accent-blue .tile-desc { color: rgba(255,255,255,0.85); }
+    .tile.accent-blue .tile-number, .tile.accent-blue h2, .tile.accent-blue .tile-desc { color: rgba(255,255,255,0.85); }
     .tile.accent-blue h2 { color: var(--white); }
     .tile.accent-blue .tile-links { border-top-color: rgba(255,255,255,0.2); }
     .tile.accent-blue .tile-link { color: rgba(255,255,255,0.75); }
     .tile.accent-blue .tile-link:hover { color: var(--white); }
     .tile.accent-blue .tile-link-bullet { background: rgba(255,255,255,0.35); }
     .tile.accent-blue .tile-link:hover .tile-link-bullet { background: var(--white); }
-
     /* Dark tile */
     .tile.accent-dark { background: var(--black); }
     .tile.accent-dark:hover { background: var(--grey-900); }
@@ -461,62 +161,17 @@
     .tile.accent-dark .tile-sublinks { border-left-color: rgba(255,255,255,0.15); }
     .tile.accent-dark .tile-sublink { color: rgba(255,255,255,0.45); }
     .tile.accent-dark .tile-sublink:hover { color: var(--white); }
-
     /* Grey tile */
     .tile.accent-grey { background: var(--grey-100); }
     .tile.accent-grey:hover { background: #e9e8e3; }
-
     /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--grey-300);
-      background: var(--white);
-      padding: 28px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .footer-logo-mark {
-      width: 22px;
-      height: 22px;
-      background: var(--black);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 10px;
-      font-weight: 500;
-    }
-
-    .footer-name {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--black);
-    }
-
-    .footer-meta {
-      font-size: 12px;
-      color: var(--grey-500);
-    }
-
-    .footer-right {
-      font-size: 12px;
-      color: var(--grey-500);
-    }
-
+    footer { border-top: 1px solid var(--grey-300); background: var(--white); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .footer-left { display: flex; align-items: center; gap: 20px; }
+    .footer-logo { display: flex; align-items: center; gap: 8px; }
+    .footer-logo-mark { width: 22px; height: 22px; background: var(--black); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 10px; font-weight: 500; }
+    .footer-name { font-size: 13px; font-weight: 500; color: var(--black); }
+    .footer-meta { font-size: 12px; color: var(--grey-500); }
+    .footer-right { font-size: 12px; color: var(--grey-500); }
     /* ── RESPONSIVE ── */
     @media (max-width: 1100px) {
       .tiles-grid { grid-template-columns: repeat(2, 1fr); }
@@ -525,7 +180,6 @@
       .tile:nth-last-child(-n+4) { border-bottom: 1px solid var(--grey-300); }
       .tile:nth-last-child(-n+2) { border-bottom: none; }
     }
-
     @media (max-width: 720px) {
       nav { padding: 0 20px; }
       .hero { padding: 52px 20px 60px; }
@@ -575,13 +229,11 @@
 </div>
 
 <main>
-
   <!-- BUCKET 0: Resource Hub -->
   <div class="section-header">
     <span class="section-label">Start here</span>
     <div class="section-rule"></div>
   </div>
-
   <div class="hub-banner">
     <div class="hub-cell">
       <div class="hub-cell-tag">01</div>
@@ -603,12 +255,11 @@
     </div>
   </div>
 
-  <!-- BUCKETS 1–7 -->
+  <!-- BUCKETS 1–N -->
   <div class="section-header">
     <span class="section-label">Documentation &amp; Resources</span>
     <div class="section-rule"></div>
   </div>
-
   <div class="tiles-grid">
 
     <!-- Bucket 1: Platform Foundations -->
@@ -622,11 +273,11 @@
           <div class="tile-link-bullet"></div>
           <div>Product Handbook<span class="tile-link-sub">Admin, iOS &amp; Android walkthrough</span></div>
         </a>
-        <a class="tile-link" href="#">
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/434634767/QA">
           <div class="tile-link-bullet"></div>
           <div>QA Testing Process<span class="tile-link-sub">Strategy, environments &amp; validation</span></div>
         </a>
-        <a class="tile-link" href="#">
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/327417859/PRDs+Product+Requirement+Documents">
           <div class="tile-link-bullet"></div>
           <div>Product Processes<span class="tile-link-sub">PRDs, grooming &amp; release workflows</span></div>
         </a>
@@ -637,23 +288,21 @@
       </div>
     </div>
 
-    <!-- Bucket 2: Integrations -->
+    <!-- Bucket 2: Connectivity of Hardware Integrations -->
     <div class="tile">
-      <span class="tile-number">02 — Integrations</span>
+      <span class="tile-number">02 — Connectivity</span>
       <span class="tile-icon">⬡</span>
-      <h2>Integrations</h2>
-      <p class="tile-desc">Detailed documentation for all external systems.</p>
+      <h2>Connectivity of Hardware Integrations</h2>
+      <p class="tile-desc">The two methods of how Carson integrates with hardware.</p>
       <div class="tile-links">
-        <div class="tile-link-group">Hardware</div>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Dormakaba</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Salto</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Brivo</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Akuvox</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>2N</a>
-        <div class="tile-link-group">Software</div>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Yardi</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Eagle Eye Networks</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Flow</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335001089/Port+Forwarding">
+          <div class="tile-link-bullet"></div>
+          <div>Port Forwarding</div>
+        </a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335033857/Cloud">
+          <div class="tile-link-bullet"></div>
+          <div>Cloud</div>
+        </a>
       </div>
     </div>
 
@@ -701,9 +350,48 @@
       </div>
     </div>
 
-    <!-- Bucket 5: Product Planning and Roadmap -->
+    <!-- Bucket 5: Hardware Integrations -->
+    <div class="tile">
+      <span class="tile-number">05 — Hardware Integrations</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Hardware Integrations</h2>
+      <p class="tile-desc">Detailed documentation for all external systems.</p>
+      <div class="tile-links">
+        <div class="tile-link-group">Intercoms</div>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1134690315/2N+-"><div class="tile-link-bullet"></div>2N</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/x/DoAzG"><div class="tile-link-bullet"></div>Akuvox</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/33685540/Comelit"><div class="tile-link-bullet"></div>Comelit</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334673410/BMX"><div class="tile-link-bullet"></div>ButterflyMX (BMX)</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334476802/Carson+Panel+Legacy+Intercom"><div class="tile-link-bullet"></div>Carson Panel (Legacy)</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334837251/ATA+Adapter+for+Legacy+Intercom+Takeover+and+SIP+Integration"><div class="tile-link-bullet"></div>ATA Adapter (Legacy)</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334935553/Intercom+Comparison+Table"><div class="tile-link-bullet"></div>Intercom Comparison Table</a>
+        <div class="tile-link-group">Access Control</div>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/33554447/Brivo"><div class="tile-link-bullet"></div>Brivo</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335296001/Dormakaba+Community+Background"><div class="tile-link-bullet"></div>Dormakaba Community</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335394319/Dormakaba+Lyazon+Background"><div class="tile-link-bullet"></div>Dormakaba Lyazon</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334509578/Smartair+Background"><div class="tile-link-bullet"></div>Smartair</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335394334/Salto+Background"><div class="tile-link-bullet"></div>Salto</a>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335492609/Access+Control+Comparison+Table"><div class="tile-link-bullet"></div>Access Control Comparison Table</a>
+      </div>
+    </div>
+
+    <!-- Bucket 6: Cameras & Smart Home -->
     <div class="tile accent-grey">
-      <span class="tile-number">05 — Planning &amp; Roadmap</span>
+      <span class="tile-number">06 — Cameras &amp; Smart Home</span>
+      <span class="tile-icon">⬡</span>
+      <h2>Cameras &amp; Smart Home</h2>
+      <p class="tile-desc">Documentation for camera systems and smart home devices.</p>
+      <div class="tile-links">
+        <div class="tile-link-group">Cameras</div>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1335263237/Eagle+Eye+Networks"><div class="tile-link-bullet"></div>Eagle Eye Networks</a>
+        <div class="tile-link-group">Smart Home</div>
+        <a class="tile-link" href="https://carsonliving.atlassian.net/wiki/spaces/COG/pages/1334345731/Ecobee+Background"><div class="tile-link-bullet"></div>Ecobee</a>
+      </div>
+    </div>
+
+    <!-- Bucket 7: Product Planning and Roadmap -->
+    <div class="tile">
+      <span class="tile-number">07 — Planning &amp; Roadmap</span>
       <span class="tile-icon">⬡</span>
       <h2>Product Planning &amp; Roadmap</h2>
       <p class="tile-desc">What is being built and when.</p>
@@ -723,9 +411,9 @@
       </div>
     </div>
 
-    <!-- Bucket 6: Team Operating Rhythm -->
+    <!-- Bucket 8: Team Operating Rhythm -->
     <div class="tile">
-      <span class="tile-number">06 — Team Operating Rhythm</span>
+      <span class="tile-number">08 — Team Operating Rhythm</span>
       <span class="tile-icon">⬡</span>
       <h2>Team Operating Rhythm</h2>
       <p class="tile-desc">How the team operates on a regular cadence.</p>
@@ -749,38 +437,23 @@
       </div>
     </div>
 
-    <!-- Bucket 7: Hardware Integrations Overview -->
-    <div class="tile">
-      <span class="tile-number">07 — Hardware</span>
-      <span class="tile-icon">⬡</span>
-      <h2>Hardware Integrations Overview</h2>
-      <p class="tile-desc">Summary of all hardware integrations with links to individual Confluence pages.</p>
-      <div class="tile-links">
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Dormakaba — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Salto — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Brivo — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Akuvox — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>2N — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Additional providers</a>
-      </div>
-    </div>
-
-    <!-- Bucket 8: Software Integrations Overview -->
+    <!-- Bucket 9: Software Integrations -->
     <div class="tile accent-dark">
-      <span class="tile-number">08 — Software</span>
+      <span class="tile-number">09 — Software Integrations</span>
       <span class="tile-icon">⬡</span>
-      <h2>Software Integrations Overview</h2>
-      <p class="tile-desc">Summary of all software integrations with links to individual Confluence pages.</p>
+      <h2>Software Integrations</h2>
+      <p class="tile-desc">Documentation for all software and PMS integrations.</p>
       <div class="tile-links">
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Yardi — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Eagle Eye Networks — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Flow — Confluence page</a>
-        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Additional providers</a>
+        <div class="tile-link-group">Property Management Systems (PMS)</div>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Yardi</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>AppFolio</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>RealPage</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>Entrata</a>
+        <a class="tile-link" href="#"><div class="tile-link-bullet"></div>ClickPay</a>
       </div>
     </div>
 
   </div>
-
 </main>
 
 <!-- FOOTER -->
@@ -790,9 +463,9 @@
       <div class="footer-logo-mark">C</div>
       <span class="footer-name">carson</span>
     </div>
-    <span class="footer-meta">Internal Portal &nbsp;·&nbsp; Product Team</span>
+    <span class="footer-meta">Internal Portal &nbsp;&middot;&nbsp; Product Team</span>
   </div>
-  <div class="footer-right">For internal use only &nbsp;·&nbsp; 2026</div>
+  <div class="footer-right">For internal use only &nbsp;&middot;&nbsp; 2026</div>
 </footer>
 
 </body>
