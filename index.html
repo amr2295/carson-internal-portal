@@ -89,9 +89,9 @@
     .hub-cell-tag { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-500); margin-bottom: 12px; }
     .hub-cell h3 { font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: 18px; letter-spacing: -0.5px; color: var(--black); margin-bottom: 10px; line-height: 1.15; }
     .hub-cell p { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin-bottom: 20px; }
-    .hub-cell-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 1px; transition: color 0.15s, border-color 0.15s; }
-    .hub-cell-link:hover { color: var(--blue); border-color: var(--blue); }
-    .hub-cell-link::after { content: '\2197'; font-size: 12px; }
+    .hub-cell-link { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--black); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; transition: color 0.15s; }
+    .hub-cell-link:hover { color: var(--blue); }
+    .hub-cell-link::after { content: '\2197'; font-size: 12px; text-decoration: none; display: inline-block; }
     /* TILES GRID */
     .tiles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--grey-300); border-radius: 4px; overflow: hidden; margin-bottom: 56px; }
     /* TILE */
