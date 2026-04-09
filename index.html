@@ -69,12 +69,12 @@
     .nav-pill { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--grey-700); background: var(--grey-100); padding: 5px 12px; border-radius: 100px; }
     .nav-pill-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
     /* HERO */
-    .hero { background: var(--black); padding: 80px 40px 88px; position: relative; overflow: hidden; }
+    .hero { background: var(--white); padding: 80px 40px 88px; position: relative; overflow: hidden; }
     .hero-inner { max-width: 1200px; margin: 0 auto; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'PP Neue Montreal', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-500); margin-bottom: 24px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'PP Neue Montreal', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--grey-700); margin-bottom: 24px; }
     .hero-eyebrow-dot { width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
-    .hero h1 { font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 1.0; letter-spacing: -2px; color: var(--white); max-width: 700px; margin-bottom: 24px; }
-    .hero-sub { font-size: 16px; color: var(--grey-500); max-width: 420px; line-height: 1.6; font-weight: 400; }
+    .hero h1 { color: #aaff83 !important; font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 1.0; letter-spacing: -2px; color: #aaff83; max-width: 700px; margin-bottom: 24px; }
+    .hero-sub { font-size: 16px; color: var(--grey-700); max-width: 420px; line-height: 1.6; font-weight: 400; }
     /* MAIN */
     main { max-width: 1200px; margin: 0 auto; padding: 64px 40px 100px; }
     /* SECTION HEADER */
@@ -95,15 +95,15 @@
     /* TILES GRID */
     .tiles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--grey-300); border-radius: 4px; overflow: hidden; margin-bottom: 56px; }
     /* TILE */
-    .tile { background: var(--white); border-right: 1px solid var(--grey-300); border-bottom: 1px solid var(--grey-300); padding: 32px 28px 28px; display: flex; flex-direction: column; gap: 0; position: relative; text-decoration: none; color: inherit; transition: background 0.15s; min-height: 340px; }
+    .tile { background: var(--white); border-right: 1px solid var(--grey-300); border-bottom: 1px solid var(--grey-300); padding: 32px 28px 28px; display: flex; flex-direction: column; gap: 0; position: relative; text-decoration: none; color: inherit; transition: background 0.15s; min-height: auto; }
     .tile:nth-child(4n) { border-right: none; }
     .tile:nth-last-child(-n+4) { border-bottom: none; }
     .tile:hover { background: var(--grey-50); }
     .tile-number { font-size: 11px; font-weight: 500; letter-spacing: 1px; color: var(--grey-500); margin-bottom: 20px; font-family: 'PP Neue Montreal', sans-serif; }
     .tile-icon { font-size: 22px; margin-bottom: 16px; display: block; }
     .tile h2 { font-family: 'FH Oscar', sans-serif; font-weight: 400; font-size: 19px; letter-spacing: -0.4px; line-height: 1.2; color: var(--black); margin-bottom: 10px; }
-    .tile-desc { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin-bottom: 24px; flex: 1; }
-    .tile-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--grey-100); padding-top: 16px; margin-top: auto; }
+    .tile-desc { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin-bottom: 0; flex: 0; }
+    .tile-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--grey-100); padding-top: 16px; margin-top: 12px; }
     .tile-link { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; text-decoration: none; color: var(--grey-700); font-size: 13px; font-weight: 400; line-height: 1.4; border-bottom: 1px solid transparent; transition: color 0.12s; }
     .tile-link:last-child { border-bottom: none; }
     .tile-link:hover { color: var(--blue); }
@@ -242,8 +242,7 @@
     <div class="tiles-grid">
 
       <!-- Tile 1: Platform Foundations -->
-      <div class="tile accent-dark">
-        <span class="tile-icon">&#x2B61;</span>
+      <div class="tile">
         <h2>Platform Foundations</h2>
         <p class="tile-desc">What Carson is and how it works.</p>
         <div class="tile-links">
@@ -268,7 +267,6 @@
 
       <!-- Tile 2: Connectivity of Hardware Integrations -->
       <div class="tile">
-        <span class="tile-icon">&#x2B61;</span>
         <h2>Connectivity of Hardware Integrations</h2>
         <p class="tile-desc">The two methods of how Carson integrates with hardware.</p>
         <div class="tile-links">
@@ -284,8 +282,7 @@
       </div>
 
       <!-- Tile 3: Hardware Integrations -->
-      <div class="tile accent-blue">
-        <span class="tile-icon">&#x2B61;</span>
+      <div class="tile">
         <h2>Hardware Integrations</h2>
         <p class="tile-desc">Detailed documentation for all external systems.</p>
         <div class="tile-links">
@@ -335,7 +332,6 @@
 
       <!-- Tile 4: Cameras & Smart Home -->
       <div class="tile">
-        <span class="tile-icon">&#x2B61;</span>
         <h2>Cameras &amp; Smart Home</h2>
         <p class="tile-desc">Documentation for camera systems and smart home integrations.</p>
         <div class="tile-links">
@@ -352,7 +348,6 @@
 
       <!-- Tile 6: Build & Documentation -->
       <div class="tile">
-        <span class="tile-icon">&#x2B61;</span>
         <h2>Build &amp; Documentation</h2>
         <p class="tile-desc">How product is defined, built, and documented.</p>
         <div class="tile-links">
@@ -372,8 +367,7 @@
       </div>
 
       <!-- Tile 7: Operations & Maintenance -->
-      <div class="tile accent-dark">
-        <span class="tile-icon">&#x2B61;</span>
+      <div class="tile">
         <h2>Operations &amp; Maintenance</h2>
         <p class="tile-desc">How the platform is maintained and supported.</p>
         <div class="tile-links">
@@ -394,7 +388,6 @@
 
       <!-- Tile 8: Product Planning & Roadmap -->
       <div class="tile">
-        <span class="tile-icon">&#x2B61;</span>
         <h2>Product Planning &amp; Roadmap</h2>
         <p class="tile-desc">What is being built and when.</p>
         <div class="tile-links">
@@ -415,7 +408,6 @@
 
       <!-- Tile 9: Team Operating Rhythm -->
       <div class="tile">
-        <span class="tile-icon">&#x2B61;</span>
         <h2>Team Operating Rhythm</h2>
         <p class="tile-desc">How the team operates on a regular cadence.</p>
         <div class="tile-links">
